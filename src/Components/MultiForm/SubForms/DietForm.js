@@ -12,7 +12,7 @@ function DietForm(props) {
             dietForm: e.target.value
         });
     }
-    console.log(formData);
+    
     const preventFunc = e => e.preventDefault();
 
     return (
