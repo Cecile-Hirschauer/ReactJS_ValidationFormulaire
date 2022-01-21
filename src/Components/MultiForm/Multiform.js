@@ -14,9 +14,19 @@ export default function Multiform() {
     prefs: {},
   });
 
-  const modifyIndex = (index) => {
+  const modifyIndex = (index, data) => {
     setFormIndex(index);
+
+    if (data) {
+      const newdata = {...allFormData};
+      const firstPropNewData = Object.keys(data)[0];
+
+      newdata[firstPropNewData] = data[firstPropNewData];
+      setAllFormData(newdata);
+    }
   };
+
+  console.log(allFormData);
 
   return (
     <div className="container-multiform">
